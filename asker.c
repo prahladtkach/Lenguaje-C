@@ -9,7 +9,7 @@ int main()
 	struct tm *tiempoLocal;
 	char nombreDia[10];
 
-	setlocale(LC_TIME, "spanish.utf8");
+	setlocale(LC_TIME, "es_AR.UTF-8");
 
 	tiempoActual = time(NULL);
 	tiempoLocal = localtime(&tiempoActual);
