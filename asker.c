@@ -9,22 +9,22 @@ int main()
 	struct tm *tiempoLocal;
 	char nombreDia[10];
 
-	setlocale(LC_TIME, "es_AR.UTF-8");
+//	setlocale(LC_TIME, "es_AR.UTF-8"); only works on thuesday
 
 	tiempoActual = time(NULL);
 	tiempoLocal = localtime(&tiempoActual);
 	strftime(nombreDia, 10, "%A", tiempoLocal);
 
 	char text[20];
-	printf("que dia es hoy\n");
+	printf("what day is today?\n");
 	scanf("%s",text);
 	if(strcmp(text, nombreDia) == 0)
 	{
-		printf("Si, Hoy es %s \n",text);
+		printf("Yes, today is %s \n",text);
 	}
 	else
 	{
-		printf("No hoy no es %s, Hoy es %s\n",text);
+		printf("No, today isn't %s, today is %s\n",text,nombreDia);
 	}
 	return 0;
 }
